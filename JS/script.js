@@ -238,17 +238,11 @@ const showError = (id) => {
 const formBtn = document.getElementById("form-btn");
 formBtn.addEventListener("click", (ss) => {
   ss.preventDefault();
-  const name = ss.target.parentNode.children[0].value;
-  const email = ss.target.parentNode.children[0].value;
-  const donated = ss.target.parentNode.children[2].value;
-
-  if ((name || email) && donated !== "Number of Trees") {
-    alert(`Thank you for donating ${donated}, ${name ? name : email}!`);
-  }
-  e.target.parentNode.children[0].value = "";
-  e.target.parentNode.children[1].value = "";
-  e.target.parentNode.children[2].value = "Number of Trees";
+  ss.target.parentNode.children[0].value = "";
+  ss.target.parentNode.children[1].value = "";
+  ss.target.parentNode.children[2].value = "Number of Trees";
 });
 
+// other
 loader("tree-container");
 loadAllPlants();
