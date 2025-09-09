@@ -204,7 +204,7 @@ const loader = (id) => {
 };
 
 
-// modal
+// modal handler
 const detailPlantContainer = document.getElementById("details-plant-container");
 const displayDetailePlant = (id) => {
   loader("details-plant-container");
