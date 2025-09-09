@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Green Earth</title>
     <!-- tailwind and daisyUi  -->
-
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
@@ -31,7 +30,7 @@
     <!-- css  -->
     <link rel="stylesheet" href="Style/style.css" />
   </head>
-  <body class="inter-font">
+  <body class="inter-font bg-green-50">
     <!-- nav bar -->
     <header class="bg-green-700">
       <nav
@@ -143,6 +142,51 @@
               class="flex justify-between items-center gap-1 my-2"
             ></div>
           </div>
+        </div>
+        <!-- modal -->
+        <dialog
+          id="detailsPlant"
+          class="modal modal-bottom sm:modal-middle flex flex-col justify-center"
+        >
+          <form method="dialog">
+            <button class="cursor-pointer">
+              <i class="fa-regular fa-circle-xmark text-4xl text-white"></i>
+            </button>
+          </form>
+          <div class="modal-box" id="details-plant-container"></div>
+        </dialog>
+      </section>
+      <!-- about campaign section -->
+      <section class="container mx-auto px-3 my-24">
+        <h2 class="text-center text-3xl font-semibold text-gray-800 mb-10">
+          About the Campaign
+        </h2>
+        <div class="grid grid-cols-6 gap-5">
+          <div class="col-span-1 hidden sm:block"></div>
+          <div
+            class="col-span-6 sm:col-span-4 flex gap-7 justify-between flex-col lg:flex-row"
+          >
+            <figure class="w-full lg:w-1/2 items-end">
+              <img src="./assets/about.png" alt="" />
+            </figure>
+            <div
+              class="w-full lg:w-1/2 flex flex-col h-full justify-center gap-5 text-gray-600"
+            >
+              <p>
+                Green Earth is a global tree plantation initiative dedicated to
+                fighting climate change. Since our start, we've planted over
+                500,000 trees worldwide. By joining our campaign, you help
+                restore forests, create habitats for wildlife, and combat global
+                warming.
+              </p>
+              <div>
+                <li>Restoration of natural habitats</li>
+                <li>Improvement of air quality</li>
+                <li>Support for local communities</li>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-1 hidden sm:block"></div>
         </div>
       </section>
     </main>
