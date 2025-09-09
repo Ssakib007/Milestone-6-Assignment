@@ -1,5 +1,3 @@
-const cartSection = document.getElementById("cart-section");
-const totalPriceSection = document.getElementById("total-price-section");
 const detailPlantContainer = document.getElementById("details-plant-container");
 const formBtn = document.getElementById("form-btn");
 
@@ -124,6 +122,8 @@ categoryList.addEventListener("click", (e) => {
   }
 });
 
+// added to cart
+
 treeContainer.addEventListener("click", (e) => {
   if (e.target.localName === "button") {
     let id = e.target.parentNode.parentNode.id;
@@ -157,6 +157,10 @@ treeContainer.addEventListener("click", (e) => {
   }
 });
 
+
+// 
+const cartSection = document.getElementById("cart-section");
+const totalPriceSection = document.getElementById("total-price-section");
 const displayAddToCartCards = (cartArray) => {
   totalPriceSection.innerHTML = "";
   let totalAmount = 0;
