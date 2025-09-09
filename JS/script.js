@@ -1,8 +1,3 @@
-
-const formBtn = document.getElementById("form-btn");
-
-let cartArray = [];
-
 // handle category list
 
 const loadCategory = () => {
@@ -109,29 +104,29 @@ allCategory.addEventListener("click", () => {
 });
 
 // load category plants
-categoryList.addEventListener("click", (e) => {
-  if (e.target.localName === "li") {
+categoryList.addEventListener("click", (ss) => {
+  if (ss.target.localName === "li") {
     allCategory.classList.remove("bg-green-800", "text-white");
     for (let li of categoryList.children) {
       li.classList.remove("bg-green-800", "text-white");
     }
 
-    e.target.classList.add("bg-green-800", "text-white");
-    const catId = e.target.id;
+    ss.target.classList.add("bg-green-800", "text-white");
+    const catId = ss.target.id;
     loadByCatergoryPlants(catId);
   }
 });
 
 // added to cart
-
-treeContainer.addEventListener("click", (e) => {
-  if (e.target.localName === "button") {
-    let id = e.target.parentNode.parentNode.id;
+let cartArray = [];
+treeContainer.addEventListener("click", (ss) => {
+  if (ss.target.localName === "button") {
+    let id = ss.target.parentNode.parentNode.id;
     let name =
-      e.target.parentNode.parentNode.children[0].children[1].children[0]
+      ss.target.parentNode.parentNode.children[0].children[1].children[0]
         .innerText;
     let price = Number(
-      e.target.parentNode.children[0].children[1].children[1].innerText
+      ss.target.parentNode.children[0].children[1].children[1].innerText
     );
     console.log(price);
 
@@ -156,7 +151,6 @@ treeContainer.addEventListener("click", (e) => {
     displayAddToCartCards(cartArray);
   }
 });
-
 
 //  cart calculation
 const cartSection = document.getElementById("cart-section");
@@ -192,8 +186,7 @@ const deleteCart = (id) => {
   displayAddToCartCards(cartArray);
 };
 
-
-//  loader 
+//  loader
 const loader = (id) => {
   const container = document.getElementById(id);
   container.innerHTML = `
@@ -202,7 +195,6 @@ const loader = (id) => {
         </div>
     `;
 };
-
 
 // modal handler
 const detailPlantContainer = document.getElementById("details-plant-container");
@@ -242,11 +234,13 @@ const showError = (id) => {
     `;
 };
 
-formBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  const name = e.target.parentNode.children[0].value;
-  const email = e.target.parentNode.children[0].value;
-  const donated = e.target.parentNode.children[2].value;
+// donation form
+const formBtn = document.getElementById("form-btn");
+formBtn.addEventListener("click", (ss) => {
+  ss.preventDefault();
+  const name = ss.target.parentNode.children[0].value;
+  const email = ss.target.parentNode.children[0].value;
+  const donated = ss.target.parentNode.children[2].value;
 
   if ((name || email) && donated !== "Number of Trees") {
     alert(`Thank you for donating ${donated}, ${name ? name : email}!`);
