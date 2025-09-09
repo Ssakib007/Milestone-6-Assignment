@@ -158,7 +158,7 @@ treeContainer.addEventListener("click", (e) => {
 });
 
 
-// 
+//  cart calculation
 const cartSection = document.getElementById("cart-section");
 const totalPriceSection = document.getElementById("total-price-section");
 const displayAddToCartCards = (cartArray) => {
@@ -192,6 +192,8 @@ const deleteCart = (id) => {
   displayAddToCartCards(cartArray);
 };
 
+
+//  loader 
 const loader = (id) => {
   const container = document.getElementById(id);
   container.innerHTML = `
