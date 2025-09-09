@@ -1,4 +1,4 @@
-const detailPlantContainer = document.getElementById("details-plant-container");
+
 const formBtn = document.getElementById("form-btn");
 
 let cartArray = [];
@@ -203,6 +203,9 @@ const loader = (id) => {
     `;
 };
 
+
+// modal
+const detailPlantContainer = document.getElementById("details-plant-container");
 const displayDetailePlant = (id) => {
   loader("details-plant-container");
   fetch(`https://openapi.programming-hero.com/api/plant/${id}`)
