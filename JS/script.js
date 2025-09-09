@@ -1,5 +1,3 @@
-const categoryList = document.getElementById("category-list");
-const treeContainer = document.getElementById("tree-container");
 const allCategory = document.getElementById("all-category");
 const cartSection = document.getElementById("cart-section");
 const totalPriceSection = document.getElementById("total-price-section");
@@ -8,6 +6,8 @@ const formBtn = document.getElementById("form-btn");
 
 let cartArray = [];
 
+// handle category list
+const categoryList = document.getElementById("category-list");
 const loadCategory = () => {
   fetch("https://openapi.programming-hero.com/api/categories")
     .then((res) => res.json())
@@ -29,8 +29,10 @@ const displayCategory = (categories) => {
   });
 };
 
+// display all plants
+const treeContainer = document.getElementById("tree-container");
 const loadAllPlants = () => {
-  allCategory.classList.add("bg-[var(--primary)]", "text-white");
+  allCategory.classList.add("bg-green-800", "text-white");
   fetch("https://openapi.programming-hero.com/api/plants")
     .then((res) => res.json())
     .then((data) => {
