@@ -1,4 +1,3 @@
-const allCategory = document.getElementById("all-category");
 const cartSection = document.getElementById("cart-section");
 const totalPriceSection = document.getElementById("total-price-section");
 const detailPlantContainer = document.getElementById("details-plant-container");
@@ -7,7 +6,7 @@ const formBtn = document.getElementById("form-btn");
 let cartArray = [];
 
 // handle category list
-const categoryList = document.getElementById("category-list");
+
 const loadCategory = () => {
   fetch("https://openapi.programming-hero.com/api/categories")
     .then((res) => res.json())
@@ -21,6 +20,7 @@ const loadCategory = () => {
 };
 loadCategory();
 
+const categoryList = document.getElementById("category-list");
 const displayCategory = (categories) => {
   categories.forEach((cat) => {
     categoryList.innerHTML += `
@@ -30,7 +30,8 @@ const displayCategory = (categories) => {
 };
 
 // display all plants
-const treeContainer = document.getElementById("tree-container");
+
+const allCategory = document.getElementById("all-category");
 const loadAllPlants = () => {
   allCategory.classList.add("bg-green-800", "text-white");
   fetch("https://openapi.programming-hero.com/api/plants")
@@ -57,6 +58,7 @@ const loadByCatergoryPlants = (id) => {
     });
 };
 
+const treeContainer = document.getElementById("tree-container");
 const displayAllPlants = (allPlants) => {
   treeContainer.innerHTML = "";
   allPlants.forEach((plant) => {
@@ -76,7 +78,7 @@ const displayAllPlants = (allPlants) => {
                             }')" class="font-semibold cursor-pointer">${
       plant.name
     }</h4>
-                            <p class="my-2 text-sm text-justify text-[#00000080]">${plant.description.slice(
+                            <p class="my-2 text-sm text-justify text-gray-500">${plant.description.slice(
                               0,
                               80
                             )}</p>
@@ -84,7 +86,7 @@ const displayAllPlants = (allPlants) => {
                     </div>
                     <div>
                            <div class="flex justify-between w-full mt-3 mb-4 font-semibold">
-                                <span class="bg-[#DCFCE7] px-3 py-1 rounded-full">${
+                                <span class="bg-green-100 px-3 py-1 rounded-full">${
                                   plant.category
                                 }</span>
                                 <span>
@@ -92,7 +94,7 @@ const displayAllPlants = (allPlants) => {
                                 <span>${plant.price}</span>
                                 </span>
                              </div>
-                             <button class="w-full py-3 font-medium text-white rounded-full bg-green-800 cursor-pointer">Add to
+                             <button class="w-full py-3 font-medium text-white rounded-full bg-green-700 cursor-pointer">Add to
                             Cart</button>
                     </div>
                 </div>
@@ -100,6 +102,7 @@ const displayAllPlants = (allPlants) => {
   });
 };
 
+// load all plants
 allCategory.addEventListener("click", () => {
   for (let li of categoryList.children) {
     li.classList.remove("bg-green-800", "text-white");
@@ -107,6 +110,7 @@ allCategory.addEventListener("click", () => {
   loadAllPlants();
 });
 
+// load category plants
 categoryList.addEventListener("click", (e) => {
   if (e.target.localName === "li") {
     allCategory.classList.remove("bg-green-800", "text-white");
