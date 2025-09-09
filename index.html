@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Green Earth</title>
-    <!-- tailwind and daisyUi link  -->
+    <!-- tailwind and daisyUi  -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
@@ -20,6 +20,49 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- inter font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css  -->
+    <link rel="stylesheet" href="Style/style.css" />
   </head>
-  <body class="bg-green-50"></body>
+  <body>
+    <header class="bg-green-700">
+      <nav
+        class="container mx-auto px-3 flex justify-between items-center py-4"
+      >
+        <!-- Dropdown in small screen -->
+        <div class="dropdown md:hidden">
+          <div tabindex="0" role="button" class="btn btn-ghost text-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-green-700 rounded-box z-1 mt-4 w-52 p-2 shadow text-white"
+          >
+            <li><a href="#">About</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Plant a Tree</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </body>
 </html>
