@@ -234,7 +234,7 @@ formBtn.addEventListener("click", (e) => {
   const donated = e.target.parentNode.children[2].value;
 
   if ((name || email) && donated !== "Number of Trees") {
-    alert(`Thank you for donating ${donated},   ${name ? name : email}!`);
+    alert(`Thank you for donating ${donated}, ${name ? name : email}!`);
   }
   e.target.parentNode.children[0].value = "";
   e.target.parentNode.children[1].value = "";
