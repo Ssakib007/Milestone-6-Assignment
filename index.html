@@ -223,28 +223,34 @@
           Plant a Tree Today
         </h2>
         <form
-          method=""
+          method="POST"
+          action="#"
           class="p-10 bg-green-700 flex flex-col gap-3 w-3/4 md:w-2/4 xl:w-1/4 mx-auto rounded-xl"
         >
           <input
             type="text"
             placeholder="Your Name"
             class="input w-full focus:outline-none border-0"
+            required
           />
+
           <input
             type="email"
             placeholder="Your Email Address"
             class="input w-full focus:outline-none border-0"
+            required
           />
-          <select class="select w-full focus:outline-none border-0">
+
+          <select class="select w-full focus:outline-none border-0" required>
             <option disabled selected>Number of Trees</option>
-            <option>$100 for 1 Tree</option>
-            <option>$200 for 2 Trees</option>
-            <option>$500 for 5 Trees</option>
-            <option>$1000 for 10 Trees</option>
+            <option>৳100 for 1 Tree</option>
+            <option>৳200 for 2 Trees</option>
+            <option>৳500 for 5 Trees</option>
+            <option>৳1000 for 10 Trees</option>
           </select>
           <button
             id="form-btn"
+            type="submit"
             class="bg-yellow-400 text-green-700 py-3 px-5 rounded-full cursor-pointer"
           >
             Donate now
