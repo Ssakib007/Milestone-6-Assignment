@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Green Earth</title>
     <!-- tailwind and daisyUi  -->
+
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
@@ -31,8 +32,8 @@
     <link rel="stylesheet" href="Style/style.css" />
   </head>
   <body class="inter-font">
+    <!-- nav bar -->
     <header class="bg-green-700">
-      <!-- nav bar -->
       <nav
         class="container mx-auto px-3 flex justify-between items-center py-4"
       >
@@ -77,5 +78,33 @@
         </button>
       </nav>
     </header>
+    <main>
+      <!-- banner -->
+      <section
+        class="flex flex-col md:flex-row bg-emerald-100 flex w-full justify-between pt-5"
+      >
+        <figure class="md:flex items-end">
+          <img src="assets/hero-leaf1.png" alt="" />
+        </figure>
+        <div
+          class="flex flex-col items-center h-full my-auto text-gray-800 max-w-max mx-auto md:max-w-2xl text-center py-6 px-3"
+        >
+          <h1 class="text-5xl font-bold">Plant a Tree, Grow a Future</h1>
+          <p class="font-normal mb-6 mt-2 text-gray-600 text-base">
+            Join our mission to plant 1 million trees and make the Earth greener
+            for future generations.
+          </p>
+          <button
+            class="bg-yellow-400 text-green-700 py-3 px-5 rounded-full cursor-pointer"
+          >
+            Get Involved
+          </button>
+        </div>
+        <figure class="md:flex items-end">
+          <img src="assets/hero-leaf2.png" alt="" />
+        </figure>
+      </section>
+      
+    </main>
   </body>
 </html>
